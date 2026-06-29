@@ -1,0 +1,269 @@
+/* ── Basic reset ── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+    color: #222;
+    padding: 30px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ── Page heading ── */
+h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+/* ── API key row ── */
+.api-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 14px 18px;
+}
+
+.api-row label {
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #444;
+}
+
+.api-row input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: monospace;
+}
+
+.api-row input:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+/* ── Two columns ── */
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* On small screens, stack them */
+@media (max-width: 650px) {
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Each white box ── */
+.box {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.box h2 {
+    font-size: 16px;
+    margin-bottom: 14px;
+    color: #333;
+}
+
+/* ── Textarea ── */
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.6;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+    font-family: Arial, sans-serif;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #6c63ff;
+}
+
+/* ── Button ── */
+button {
+    margin-top: 14px;
+    width: 100%;
+    padding: 12px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #574fd6;
+}
+
+button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+/* ── Error message ── */
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+}
+
+/* ── Empty state placeholder ── */
+.empty {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    padding: 60px 20px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+}
+
+/* ── Resume Card (shown after AI responds) ── */
+.resume-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.resume-card .job-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.resume-card .company-line {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 16px;
+}
+
+.resume-card h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+/* ── Achievements list ── */
+.resume-card ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.resume-card ul li {
+    font-size: 14px;
+    line-height: 1.5;
+    padding-left: 14px;
+    position: relative;
+    color: #333;
+}
+
+.resume-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #6c63ff;
+}
+
+/* ── Skills badges ── */
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.skill-badge {
+    font-size: 12px;
+    background: #f0eeff;
+    color: #5146c8;
+    border: 1px solid #d4cfff;
+    border-radius: 20px;
+    padding: 3px 10px;
+}
+
+/* ── Impact label ── */
+.impact-high {
+    background: #e6f9ee;
+    color: #1a7a3e;
+    border: 1px solid #a3d9b8;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.impact-medium {
+    background: #fff8e6;
+    color: #8a5e00;
+    border: 1px solid #f0d080;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.impact-low {
+    background: #f4f4f4;
+    color: #666;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    display: inline-block;
+}
+
+/* ── Loading spinner ── */
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Resume Enhancer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>✨ Smart Resume Enhancer</h1>
+    <p class="subtitle">Paste your messy work experience — AI will structure it for you</p>
+
+    <!-- TOP: API Key input -->
+    <div class="api-row">
+        <label>Your OpenRouter API Key:</label>
+        <input type="password" id="apiKey" placeholder="Paste your API key here" />
+    </div>
+
+    <!-- MIDDLE: Two columns -->
+    <div class="columns">
+
+        <!-- LEFT: User types here -->
+        <div class="box">
+            <h2>Your rough text</h2>
+            <textarea id="inputText"
+                placeholder="Example: I worked at Techmate Softtech for 6 months as a software development intern. I built web apps using React, Vue, Node.js and Laravel. I also worked on REST APIs and helped with the company website using Astro. I used Git for version control."></textarea>
+            <button id="enhanceBtn" onclick="enhance()">✨ Enhance with AI</button>
+            <p id="errorMsg" class="error"></p>
+        </div>
+
+        <!-- RIGHT: AI result shows here -->
+        <div class="box">
+            <h2>Structured resume preview</h2>
+            <div id="result">
+                <div class="empty">Your structured resume card will appear here after you click Enhance</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
