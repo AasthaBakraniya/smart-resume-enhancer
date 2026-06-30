@@ -37,6 +37,13 @@
             <div id="result">
                 <div class="empty">Your structured resume card will appear here after you click Enhance</div>
             </div>
+
+            <!-- NEW: Refine box — only shows after first result -->
+            <div id="refineBox" class="refine-box" style="display:none">
+                <label>Want to tweak it? Add an instruction:</label>
+                <input type="text" id="refineInput" placeholder="e.g. Focus more on Laravel and Vue.js" />
+                <button id="refineBtn" onclick="refine()">🔁 Refine</button>
+            </div>
         </div>
 
     </div>
